@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge=18;
+if (votingAge >= 18 ){
+  console.log('true');
+}
 
 
 /*
@@ -30,6 +33,12 @@ Do the following:
 
    HINT: no function required
 */
+let myAge=35;
+let age=30;
+if (age===30) {
+  myAge=20;
+  console.log(myAge);
+}
 
 
 
@@ -45,6 +54,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year="1999";
+console.log(parseInt(year));
 
 
 
@@ -58,10 +69,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(num1,num2){
     /*add your code here*/
+    return num1*num2;
   }
-
+   let result= multiply(8,5);
+   console.log(result);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +87,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(ageyear){
     /*add your code here*/
+    return ageyear*7;
 }
-
+let newAge=dogYears(10);
+console.log(newAge);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +122,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weightlb, agedog){
     /*add your code here*/
+    if(weightlb <=5 && agedog >=1){
+      console.log(weightlb*0.05);
+    }else if(weightlb>=6 && weightlb <=10 && agedog>=1){
+      console.log(weightlb*0.04);
+    }else if(weightlb>=11 && weightlb <=15 && agedog>=1){
+      console.log(weightlb*0.03)
+    }else if(weightlb >=15 && agedog >=1){
+      console.log(weightlb*0.02);
+    }else if(agedog>=0.166 && agedog<=0.333){
+      console.log(weightlb*0.1)
+    }else if(agedog>=0.334 && agedog<=0.583){
+      console.log(weightlb*0.05)
+    }else if(agedog>=0.584 && agedog<1){
+      console.log(0.04);
+    }
+    return;
   }
-
+  console.log(hungryDog(0.55,1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -133,9 +164,28 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = "paper";
+}else if(computer > 0.67){
+  computer = 'scissors';
+}
+console.log(computer);
 
 function game(user, computer){
-    /*add your code here*/
+    if(user === computer){
+      return `it's a tie`;
+    }else if(user === `rock` && computer === `scissors`){
+      return `you win!`;
+    }else if(user === `paper` && computer === `rock`){
+      return `you win!`
+    }else if(user === `scissors` && computer === `paper`){
+      return `you win!`;
+    }else{
+      return `you lose!`
+    } 
 }
   
   
@@ -151,10 +201,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
     /*add your code here*/
+    return kilometers * 0.62;
   }
-
+  let ml1=miles(11);
+  console.log(ml1);
 
 
 //Task 5b - Feet to CM
@@ -165,11 +217,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeter){
     /*add your code here*/
+    return centimeter/30.48;
   }
- 
-
+  let newfeet=feet(50);
+  console.log(newfeet);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,9 +254,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+function grade(score){
   /*Your Code here */
+  if (score >= 90){
+    console.log('you got an A')
+
+  }else if (score >=80 && score <89){
+    console.log('you got B')
+  }else if (score >=70 && score <79){
+    console.log('you got C')
+  }else if (score >=60 && score <69){
+    console.log('you got D')
+  }else if (score <60){
+    console.log('you got F')
   }
+   return; 
+  }
+  console.log(grade(90));
   
   
 
